@@ -1,0 +1,16 @@
+{
+  "buildCommand": "npm run build",
+  "devCommand": "npm run dev",
+  "installCommand": "npm install",
+  "framework": "nextjs",
+  "regions": ["fra1"],
+  "env": {
+    "NEXT_PUBLIC_WEATHER_API_KEY": "fad16184d566c8d98e80f0544138864f"
+  },
+  "build": {
+    "env": {
+      "NEXT_PUBLIC_WEATHER_API_KEY": "fad16184d566c8d98e80f0544138864f"
+    }
+  },
+  "ignoreCommand": "git diff --quiet HEAD^ HEAD ./"
+}

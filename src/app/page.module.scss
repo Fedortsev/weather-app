@@ -1,0 +1,93 @@
+// Block: weather-page
+.weather-page {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #e3f2fd 0%, #ffffff 100%);
+  padding: 40px 0;
+
+  &__container {
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
+
+  &__header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #1976d2;
+    font-size: 3rem;
+    letter-spacing: -1px;
+  }
+
+  &__subtitle {
+    color: #666;
+    font-size: 1.1rem;
+  }
+
+  &__empty-state {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 16px;
+    margin-top: 40px;
+    animation: fadeIn 0.5s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+    h5 {
+      margin-bottom: 12px;
+      color: #1976d2;
+    }
+  }
+
+  &__cities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 28px;
+    margin-top: 32px;
+    animation: fadeIn 0.5s ease;
+  }
+
+  &__city-card {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 900px) {
+  .weather-page__cities-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .weather-page {
+    padding: 20px 0;
+
+    &__header {
+      margin-bottom: 24px;
+    }
+
+    &__title {
+      font-size: 2rem;
+    }
+
+    &__empty-state {
+      padding: 60px 20px;
+    }
+  }
+}

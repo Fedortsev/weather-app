@@ -1,0 +1,115 @@
+.city-card {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 320px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  }
+
+  &--loading {
+    cursor: default;
+
+    &:hover {
+      transform: none;
+      box-shadow: none;
+    }
+  }
+
+  &--error {
+    cursor: default;
+
+    &:hover {
+      transform: none;
+    }
+  }
+}
+
+.city-card__content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.city-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.city-card__weather-icon {
+  img {
+    width: 80px;
+    height: 80px;
+    margin: -12px;
+  }
+}
+
+.city-card__temperature {
+  text-align: center;
+
+  h2 {
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+}
+
+.city-card__temperature-value {
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.city-card__feels-like {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.city-card__description {
+  text-align: center;
+
+  h6 {
+    font-weight: 500;
+  }
+}
+
+.city-card__details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-top: auto;
+}
+
+.city-card__actions {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 16px;
+}
+
+@media (max-width: 600px) {
+  .city-card {
+    min-height: 280px;
+  }
+
+  .city-card__weather-icon {
+    img {
+      width: 64px;
+      height: 64px;
+    }
+  }
+
+  .city-card__temperature {
+    h2 {
+      font-size: 3rem;
+    }
+  }
+}
